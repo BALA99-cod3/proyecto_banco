@@ -1,0 +1,70 @@
+<ion-content color="light">
+  <div class="login-container">
+    <ion-card class="login-card">
+      <ion-card-header style="text-align:center; padding: 32px 16px 16px;">
+        <div style="font-size:72px; line-height:1; margin-bottom:12px;">🏦</div>
+        <ion-card-title style="font-size:1.6rem; font-weight:800; color:var(--ion-color-primary);">
+          Banco Avanzado
+        </ion-card-title>
+        <ion-card-subtitle style="margin-top:4px;">
+          Sistema de Gestión Bancaria
+        </ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item style="margin-bottom:8px;">
+          <ion-label position="floating">Correo electrónico</ion-label>
+          <ion-input
+            type="email"
+            [(ngModel)]="email"
+            placeholder="usuario@email.com"
+            (keyup.enter)="onLogin()">
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input
+            [type]="showPass ? 'text' : 'password'"
+            [(ngModel)]="password"
+            (keyup.enter)="onLogin()">
+          </ion-input>
+          <ion-icon
+            slot="end"
+            [name]="showPass ? 'eye-off-outline' : 'eye-outline'"
+            (click)="showPass = !showPass"
+            style="cursor:pointer; margin-top:20px; color:var(--ion-color-medium);">
+          </ion-icon>
+        </ion-item>
+
+        <ion-note color="medium" style="display:block; font-size:12px; margin: 8px 0 24px; text-align:center;">
+          Demo: admin&#64;banco.com / password
+        </ion-note>
+
+        <ion-button expand="block" size="large" (click)="onLogin()">
+          <ion-icon slot="start" name="log-in-outline"></ion-icon>
+          Iniciar Sesión
+        </ion-button>
+
+        <ion-button expand="block" fill="clear" style="margin-top:8px;" (click)="goRegister()">
+          ¿No tienes cuenta? <strong>&nbsp;Regístrate</strong>
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+<style>
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 16px;
+}
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+</style>

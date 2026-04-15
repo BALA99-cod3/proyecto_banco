@@ -1,0 +1,42 @@
+:root {
+  /* Paleta azul bancaria */
+  --ion-color-primary:          #1565C0;
+  --ion-color-primary-rgb:      21,101,192;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-shade:    #1259aa;
+  --ion-color-primary-tint:     #2c74c6;
+
+  --ion-color-secondary:          #00897B;
+  --ion-color-secondary-rgb:      0,137,123;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-shade:    #00786c;
+  --ion-color-secondary-tint:     #1a9588;
+
+  --ion-color-tertiary:          #7B1FA2;
+  --ion-color-tertiary-rgb:      123,31,162;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-shade:    #6c1b8e;
+  --ion-color-tertiary-tint:     #8835ab;
+
+  --ion-color-success:  #2E7D32;
+  --ion-color-warning:  #F9A825;
+  --ion-color-danger:   #C62828;
+  --ion-color-medium:   #616161;
+  --ion-color-light:    #F5F5F5;
+
+  --ion-font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --ion-background-color: #121212;
+    --ion-background-color-rgb: 18,18,18;
+    --ion-text-color: #ffffff;
+    --ion-border-color: #222222;
+    --ion-color-step-50: #1e1e1e;
+    --ion-color-step-100: #2a2a2a;
+    --ion-color-step-150: #363636;
+    --ion-item-background: #1e1e1e;
+    --ion-card-background: #1e1e1e;
+  }
+}
