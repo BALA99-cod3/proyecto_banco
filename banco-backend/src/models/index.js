@@ -25,7 +25,7 @@ const Usuario = sequelize.define('Usuario', {
   email:        { type: DataTypes.STRING(100), allowNull: false, unique: true },
   password:     { type: DataTypes.STRING(255), allowNull: false },
   cliente_id:   { type: DataTypes.INTEGER, allowNull: true },
-  activo:       { type: DataTypes.BOOLEAN, defaultValue: 1 },
+  activo:       { type: DataTypes.BOOLEAN, defaultValue: true },
   ultimo_login: { type: DataTypes.DATE, allowNull: true },
   creado_en:    { type: DataTypes.DATE, defaultValue: DataTypes.NOW }
 }, { tableName: 'usuarios' });
