@@ -36,9 +36,9 @@ app.use((err, _req, res, _next) => {
 // Arrancar servidor
 sequelize.authenticate()
   .then(() => {
-    console.log('✅ Conectado a la base de datos MySQL');
+    console.log('✅ Conectado a PostgreSQL');
     // alter:false para no modificar tablas existentes; cambia a true solo en dev
-    return sequelize.sync({ alter: false });
+    return sequelize.sync({ force: true });
   })
   .then(() => {
     app.listen(PORT, () =>
